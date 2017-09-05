@@ -13,4 +13,23 @@ Optional
 Optional
  - `cd <meaningful-appname>`
  - and `npm install --save @angular/material hammerjs @angular/cdk` for angular material.
- 
+
+# To learn
+ - TypeScript
+ - Pug
+
+# create new component
+`create new file '<your-component>.component.ts'
+```
+    import {Component} from '@angular/core';
+    @Component({
+        selector:'a-new-tagname'
+    })
+    export class MyComponent{
+        constructor(){
+            //I'm up.
+        }
+    }
+```
+
+
