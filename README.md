@@ -14,6 +14,10 @@ Optional
  - `cd <meaningful-appname>`
  - and `npm install --save @angular/material hammerjs @angular/cdk` for angular material.
 
+# test server
+ - `cd path/to/project/dir`
+ - `ng serve`
+
 # To learn
  - TypeScript
  - Pug
@@ -23,13 +27,32 @@ Optional
 ```
     import {Component} from '@angular/core';
     @Component({
-        selector:'a-new-tagname'
+        selector:'a-new-tagname',
+        template:'<span> Hello world </span>'
     })
     export class MyComponent{
         constructor(){
             //I'm up.
         }
     }
+```
+`Including external template and styles`
+
+ - Files
+```
+... \app.component.ts
+    \app.component.html
+    \app.component.css
+```
+ - Component
+```
+    ...
+    @Component({
+        selector:'a-new-tagname',
+        templateUrl : './app.component.html'
+        styleUrls:['./app.component.css' /*, 'morestyles.css'*/]
+    })
+    ...
 ```
 
 
