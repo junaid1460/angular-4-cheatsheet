@@ -55,4 +55,18 @@ Optional
     ...
 ```
 
+# Injectable / Service 
+
+```
+import {Injectable} from '@angular/core';
+
+@Injectable()
+export class MyService{
+    constructor(){
+        // do something
+    }
+}
+
+```
+
 
