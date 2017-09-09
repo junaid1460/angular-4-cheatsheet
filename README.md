@@ -56,7 +56,7 @@ Optional
 ```
 
 # Injectable / Service 
-
+`app.service.ts`
 ```
 import {Injectable} from '@angular/core';
 
@@ -68,5 +68,32 @@ export class MyService{
 }
 
 ```
+# using http services with injectable
+
+`app.module.ts`
+```
+import {HttpModule} from '@angular/http';
+@NgModule({
+  imports: [
+    HttpModule
+  ],
+})
+export class AppModule{}
+```
+
+`app.service.ts`
+```
+import {Injectable} from '@angular/core';
+import {Http} from '@angular/http';
+
+@Injectable()
+export class MyService{
+    constructor(private _http:Http){
+        // do something
+    }
+}
+```
+
+
 
 
