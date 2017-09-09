@@ -94,6 +94,30 @@ export class MyService{
 }
 ```
 
+# Injecting a service to a component
 
+`app.module.ts`
+```
+import {HttpModule} from '@angular/http';
+import {MyService} from './app.service';
 
+@NgModule({
+  providers: [
+    MyService
+  ],
+})
+export class AppModule{}
+```
+`app.component.ts`
+```
+import {Component} from '@angular/core';
+import {MyService} from './app.service';
 
+@Component({ ... })
+export class MyComponent{
+        constructor(){
+            //do something
+        }
+}
+
+```
